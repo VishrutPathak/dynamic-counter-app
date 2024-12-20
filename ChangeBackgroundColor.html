@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        body,html{
+            background-color: #121212;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        button{
+            padding: 15px 40px;
+            border-radius: 60px;
+            font-size: 30px;
+            background-color: #444;
+            font-style: oblique;
+            cursor: pointer;
+            border-right: solid #666 ;
+            border-bottom: solid #666;
+        
+        }
+        button:hover{
+            transition: .3s ease;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changebgcolor()">Click to see magic</button>
+
+    <script>
+        let colors = ['#990000','#000080','#8a00e6','#006600','black',];
+        let colorindex = 0;
+        function changebgcolor(){
+            
+            document.body.style.backgroundColor = colors[colorindex];
+            
+            colorindex = (colorindex + 1) % colors.length;
+
+
+        }
+
+    </script>
+</body>
+</html>
